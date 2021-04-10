@@ -18,9 +18,9 @@ def is_leap(year):
 
 def days_in_month(year, month):
   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  
-  month_index = int(month) - 1
-  if is_leap(int(year)):
-    month_days[1] = 29
+  month_index = month - 1
+  if is_leap(year) and month == 2:
+    return 29
   return month_days[month_index]
   
 print(logo)
